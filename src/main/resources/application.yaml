@@ -38,7 +38,7 @@ spring:
           # 2. 필터에서 def 를 hello 로 바꾸어서 설정된 uri 로 보냄
           # 3. ${HELLO_SERVICE_URI:http://localhost:8765}/hello 로 연결
         - id: user-service
-          uri: lb://user-service
+          uri: lb://user-service:9002
           predicates:
             - Path=/users
 
